@@ -49,6 +49,3 @@ if($_GET['search'] == ""){
     </section>
 </main>
 <script src="js/search.js"></script>
-<?php
-require 'footer.php'
-?>

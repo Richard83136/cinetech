@@ -68,3 +68,26 @@ footer li{
 	margin-left: 10px;
 	margin-right: 10px;
 }
+.pageinscription{
+    background-image:url('./images/fondecran.jpg'); 
+    background-repeat: no-repeat;
+    
+    
+}
+.pageconnexion{
+    background-image:url('./images/fdconnexion.png'); 
+    background-repeat: no-repeat;
+    
+}
+.pagecommentaire{
+    background-image:url('./images/fdcommentaire.jpg'); 
+    background-repeat: no-repeat;
+    width:100%;
+    height:740px;
+    
+}
+.pagelivreor{
+    background-image:url('./images/fdretour.png'); 
+    background-repeat: no-repeat;
+    
+}

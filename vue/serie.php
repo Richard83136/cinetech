@@ -23,4 +23,4 @@
         </div>
         
     </section>
-<?= require 'footer.php' ?>
+

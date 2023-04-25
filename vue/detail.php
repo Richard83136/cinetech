@@ -36,10 +36,10 @@
     </section>
     <section>
         <div class="commentaires">
-            <form action="" method="post">
+            <!-- <form action="" method="post">
                 <textarea name="commentaire" cols="30" rows="10"></textarea>
                 <input type="submit" value="submit">
-            </form>
+            </form> -->
         </div>
         <?php
         if(!empty($_POST)){ 
@@ -49,7 +49,7 @@
         }
         ?>
         <div>
-            <?php
+        <!-- <?php
                 
                 $com = new Commentaire();
                 $commentaires = $com->get_commentaires();
@@ -65,7 +65,7 @@
                         <p><?= $commentaire['commentaire']; ?></p>
                         <p class="id">By: <?= $id; ?></p>
                     </div>
-                <?php endforeach ;?>
+                <?php endforeach ;?>  -->
             </div>
         </div>
     </section>

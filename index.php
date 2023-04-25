@@ -21,18 +21,21 @@
     <header class="headerindex">
         <?php
             session_start();
-            if(isset($_SESSION['user'])){
+            if(isset($_SESSION['login'])){
                 echo '<a href="vue/film.php">Films</a>';
                 echo '<a href="vue/serie.php">Series</a>';
-                echo '<a href="vue/profil.php">Profil</a>';
-                // echo '<a href="vue/deconnection.php">Déconnexion</a>';
+                echo '<a href="profil.php">Profil</a>';
+                echo '<a href="livre-or.php">Livre d\'Or</a>';
+                echo '<a href="commentaire.php">Commentaires</a>';
+                echo '<a href="deconnexion.php">Déconnexion</a>';
             }
 
             else{
                 echo '<a href="vue/film.php">Films</a>';
                 echo '<a href="vue/serie.php">Series</a>';
-                echo ' <a href="#">Inscription</a>';
-                echo '<a href="#">Connexion</a>';
+                echo ' <a href="inscription.php">Inscription</a>';
+                echo '<a href="connexion.php">Connexion</a>';
+                echo '<a href="deconnexion.php">Déconnexion</a>';
             }    
         ?>
        
@@ -40,6 +43,7 @@
     <main>
         <h1>Cinetech</h1>
         <h2>bienvenue 
+            
             
         </h2>
 
@@ -66,19 +70,6 @@
         </div>        
     </section>
 
-    <footer>
-        <ul class="box">
-            <li class="link_name"><h3>Navigation</h3></li>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="vue/film.php">Films</a></li>
-            <li><a href="vue/serie.php">Séries</a></li>
-        </ul>
-        <p>© 2022 NetFredox</p>
-           <ul class="box">
-            <li class="link_name"><h3>Liens externes</h3></li>
-            <li><a href="https://github.com/frederick-sonder1/cinetech">Repository GitHub</a></li>
-            <li><a href="https://frederick-sonder.students-laplateforme.io">Portfolio</a></li>
-        </ul>
-    </footer>
+   
 </body>
 </html>

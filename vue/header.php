@@ -39,8 +39,8 @@
                 echo '<a href="../index.php">accueil</a>';
                 echo '<a href="film.php">Films</a>';
                 echo '<a href="serie.php">Series</a>';
-                echo ' <a href="#">Inscription</a>';
-                echo '<a href="#">Connexion</a>';
+                echo ' <a href="../inscription.php">Inscription</a>';
+                echo '<a href="../connexion.php">Connexion</a>';
             }  
         ?>
         <form action="search.php">
