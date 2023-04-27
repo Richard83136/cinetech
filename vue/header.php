@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +28,13 @@
     <header class="headermix">
         <?php        
             // session_start();
-            if(isset($_SESSION['user'])){
+            if(isset($_SESSION['login'])){
                 echo '<a href="../index.php">accueil</a>';
                 echo '<a href="film.php">Films</a>';
                 echo '<a href="serie.php">Series</a>';
-                echo '<a href="profil.php">Profil</a>';
-                echo '<a href="deconnection.php">Déconnexion</a>';
+                echo '<a href="/cinetech/profil.php">Profil</a>';
+                // echo '<a href="connexion.php">connexion</a>';
+                echo '<a href="/cinetech/deconnexion.php">Déconnexion</a>';
             }
 
            
@@ -39,8 +43,8 @@
                 echo '<a href="../index.php">accueil</a>';
                 echo '<a href="film.php">Films</a>';
                 echo '<a href="serie.php">Series</a>';
-                echo ' <a href="../inscription.php">Inscription</a>';
-                echo '<a href="../connexion.php">Connexion</a>';
+                echo '<a href="/cinetech/profil.php">Profil</a>';
+                // echo '<a href="/cinetech/deconnexion.php">Déconnexion</a>';
             }  
         ?>
         <form action="search.php">

@@ -5,9 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    
+    
+    <title>Cinetech</title>
+</head>
+<header>
+
+</header>
+<body>
+    
     <script src="js\detail.js"></script>
     <script src="js\accueil.js"></script>
     <script src="js\search.js"></script>
+    <script src="js\profil.js"></script>
 
 
     <link rel="stylesheet" href="css/accueil.css">
@@ -21,13 +31,18 @@
     <header class="headerindex">
         <?php
             session_start();
+            
             if(isset($_SESSION['login'])){
+
+
                 echo '<a href="vue/film.php">Films</a>';
                 echo '<a href="vue/serie.php">Series</a>';
                 echo '<a href="profil.php">Profil</a>';
-                echo '<a href="livre-or.php">Livre d\'Or</a>';
+                echo '<a href="mesfavoris.php">Mes favoris</a>';
                 echo '<a href="commentaire.php">Commentaires</a>';
                 echo '<a href="deconnexion.php">Déconnexion</a>';
+
+                
             }
 
             else{
@@ -35,7 +50,7 @@
                 echo '<a href="vue/serie.php">Series</a>';
                 echo ' <a href="inscription.php">Inscription</a>';
                 echo '<a href="connexion.php">Connexion</a>';
-                echo '<a href="deconnexion.php">Déconnexion</a>';
+                // echo '<a href="deconnexion.php">Déconnexion</a>';
             }    
         ?>
        
@@ -70,6 +85,6 @@
         </div>        
     </section>
 
-   
+    
 </body>
 </html>

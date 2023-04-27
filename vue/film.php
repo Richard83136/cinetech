@@ -1,4 +1,6 @@
-<?= require 'header.php' ?>
+<?php 
+// session_start();
+require 'header.php' ?>
     <ul classe="genres"></ul>
     <section class="container">
 
@@ -23,4 +25,4 @@
         </div>
         
     </section>
-<?= require 'footer.php' ?>
+

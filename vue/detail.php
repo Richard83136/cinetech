@@ -1,6 +1,9 @@
-<?= include 'header.php';
-    // require '../model/commentaire.php';
-    // require '../model/user.php'?>
+<?php 
+
+ include 'header.php';
+    // require '../commentaire.php';
+    // 
+    ?>
     <section class="container">
         <div class="detail_film">  
             <div class="detail_film_img"></div>
@@ -14,14 +17,17 @@
                 <input type="submit" name="checkbox_delete" value="Supprimer du favoris" id="checkbox">
             </label>
         </form>
-        <?php if(isset($_POST['checkbox'])){
+        <?php 
+        require('../user.php');
+        
+        if(isset($_POST['checkbox'])){
 
-                 
+                
                 $user = new User; 
                 $user->add_Fav();
             }
             elseif(isset($_POST['checkbox_delete'])){
-
+ 
                 $user = new User; 
                 $user->delet_fav();
             } 
@@ -69,4 +75,3 @@
             </div>
         </div>
     </section>
-<?= include 'footer.php'; ?>
