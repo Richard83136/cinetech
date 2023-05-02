@@ -9,9 +9,7 @@
     
     <title>Cinetech</title>
 </head>
-<header>
 
-</header>
 <body>
     
     <script src="js\detail.js"></script>
@@ -24,8 +22,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/search.css">
 
-    <title>Ciné-tech</title>
-</head>
+    
+
 <body>
 
     <header class="headerindex">
@@ -57,10 +55,7 @@
     </header>
     <main>
         <h1>Cinetech</h1>
-        <h2>bienvenue 
-            
-            
-        </h2>
+        <h2>Bienvenue sur la page d'accueil</h2>
 
 <section class="container">
 
@@ -84,6 +79,41 @@
             <article class="scroll_container popular_serie"></article>
         </div>        
     </section>
+    <h3>Commentaires</h3>
+    <?php 
+require('dbconnect.php');
+//SELECT utilisateurs.login, commentaires.commentaire FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur;
+  $req = $pdo->query("SELECT utilisateurs.login, commentaires.commentaire FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur ");
+  ?>
+    <div style="margin-left:33%;margin-bottom:50px;">
+      <table >
+          
+          <thead>
+              <tr style="border:1px solid black;" >
+                  <th style="border:1px solid black;text-align:center;padding:2%;">Utilisateur</th>
+                  <th style="border:1px solid black;text-align:center;">commentaire :</th>
+                  
+                  
+              </tr>
+          </thead>
+          <?php
+          while($res = $req->fetch()){
+        //   var_dump($res);
+          ?>
+          
+              <tbody>
+                  <tr>
+                      <td style="border:1px solid black; text-align:center;min-width:300px;"><?php echo $res['login'] ?></td>
+                      <td style="border:1px solid black; text-align:center;min-width:150px"><?php echo  $res['commentaire'] ?></td>
+                      
+                      
+                  </tr>
+              </tbody>
+          <?php
+          } 
+          ?>
+      </table>
+</div>
 
     
 </body>

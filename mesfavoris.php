@@ -89,7 +89,7 @@ $req = $pdo->query("SELECT `id`, `id_utilisateur`, `support_id`, `type`  FROM `f
     <section class="container">
 
 <div class="scroll_bloc hover">
-    <h3>Films les mieux notés</h3>
+    <h3>Films les mieux notés de la serie </h3>
     <article class="scroll_container top_rated_movie"></article>
 </div>
 
