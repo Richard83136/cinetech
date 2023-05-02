@@ -25,4 +25,39 @@ require 'header.php' ?>
         </div>
         
     </section>
+    <h3>Commentaires</h3>
+    <?php 
+require('../dbconnect.php');
+//SELECT utilisateurs.login, commentaires.commentaire FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur;
+  $req = $pdo->query("SELECT utilisateurs.login, commentaires.commentaire FROM utilisateurs INNER JOIN commentaires ON utilisateurs.id = commentaires.id_utilisateur ");
+  ?>
+    <div style="margin-left:33%;">
+      <table >
+          
+          <thead>
+              <tr style="border:1px solid black;" >
+                  <th style="border:1px solid black;text-align:center;padding:2%;">Utilisateur</th>
+                  <th style="border:1px solid black;text-align:center;">commentaire :</th>
+                  
+                  
+              </tr>
+          </thead>
+          <?php
+          while($res = $req->fetch()){
+        //   var_dump($res);
+          ?>
+          
+              <tbody>
+                  <tr>
+                      <td style="border:1px solid black; text-align:center;min-width:300px;"><?php echo $res['login'] ?></td>
+                      <td style="border:1px solid black; text-align:center;min-width:150px"><?php echo  $res['commentaire'] ?></td>
+                      
+                      
+                  </tr>
+              </tbody>
+          <?php
+          } 
+          ?>
+      </table>
+</div>
 

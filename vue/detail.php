@@ -1,8 +1,8 @@
 <?php 
 
  include 'header.php';
-    // require '../commentaire.php';
-    // 
+    require '../classcommentaire.php';
+     
     ?>
     <section class="container">
         <div class="detail_film">  
@@ -41,37 +41,5 @@
         </div>
     </section>
     <section>
-        <div class="commentaires">
-            <!-- <form action="" method="post">
-                <textarea name="commentaire" cols="30" rows="10"></textarea>
-                <input type="submit" value="submit">
-            </form> -->
-        </div>
-        <?php
-        if(!empty($_POST)){ 
-            
-            $comm = new Commentaire();
-            $comm->commentaire();
-        }
-        ?>
-        <div>
-        <!-- <?php
-                
-                $com = new Commentaire();
-                $commentaires = $com->get_commentaires();
-            ?>
-            <h3>commentaires</h3>
-            <div class="commentaires_container">
-                <?php foreach($commentaires as $commentaire): ?>
-                    <div class="commentaire">
-                        <?php  
-                            $user = new User(); 
-                            $id = $user->getPseudo((int)$commentaire['user_id']);
-                        ?>
-                        <p><?= $commentaire['commentaire']; ?></p>
-                        <p class="id">By: <?= $id; ?></p>
-                    </div>
-                <?php endforeach ;?>  -->
-            </div>
-        </div>
-    </section>
+        
+
