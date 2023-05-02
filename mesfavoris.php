@@ -10,8 +10,11 @@ include('dbconnect.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script src="js\favori.js"></script>
+    <script src="js\detail.js"></script>
+    <script src="js\accueil.js"></script>
+    <script src="js\search.js"></script>
+    <script src="js\profil.js"></script>
+  
     <link rel="stylesheet" href="css/accueil.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/search.css">
@@ -46,15 +49,15 @@ include('dbconnect.php');
         ?>
        
     </header>
-<div >
+
     <h1 style="text-align:center;">Mes favoris</h1><br><br>
    
   <?php
   
 $req = $pdo->query("SELECT `id`, `id_utilisateur`, `support_id`, `type`  FROM `favoris`  WHERE 1 ");
 ?>
-
-    <table class="mt-5">
+    <div style="color:blue;margin-left:30%;">
+    <table class="mt-5 d-block mx-auto">
         
         <thead>
             <tr style="border:1px solid black;" >
@@ -80,18 +83,17 @@ $req = $pdo->query("SELECT `id`, `id_utilisateur`, `support_id`, `type`  FROM `f
         <?php
         } 
         ?>
-    </table>
+    </table></div>
 
-      </div>
-      <section class="container">
+      
+    <section class="container">
 
 <div class="scroll_bloc hover">
-    <h3>Mes films préférés</h3>
+    <h3>Films les mieux notés</h3>
     <article class="scroll_container top_rated_movie"></article>
+</div>
 
-</div> 
-
-     
+       
 </section>
     
 </body>
