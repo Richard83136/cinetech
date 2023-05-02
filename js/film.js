@@ -7,11 +7,7 @@ window.addEventListener('DOMContentLoaded',(event) => {
     var top_movie_container = document.querySelector('.top_rated_movie');
     var popular_movie_container = document.querySelector('.popular_movie');
     var now_playing_movie_container = document.querySelector('.now_playing_movie');
-/*----------------------------- Lancement des méthodes ------------------------------- */
-/*----------------------------- Lancement des méthodes ------------------------------- */
-/*----------------------------- Lancement des méthodes ------------------------------- */
-/*----------------------------- Lancement des méthodes ------------------------------- */
-/*----------------------------- Lancement des méthodes ------------------------------- */
+
     function App(){
         upcoming_films()
         top_rated_movie()
@@ -19,11 +15,7 @@ window.addEventListener('DOMContentLoaded',(event) => {
         now_playing_movie()
     }
     App()
-/*----------------------------- upcoming_movie ------------------------------- */
-/*----------------------------- upcoming_movie ------------------------------- */
-/*----------------------------- upcoming_movie ------------------------------- */
-/*----------------------------- upcoming_movie ------------------------------- */
-/*----------------------------- upcoming_movie ------------------------------- */
+
     function upcoming_films(){
         fetch(api_base_url + 'movie/upcoming?api_key=' + apiKey + '&language=fr-FR&page=1')
             .then(response =>  response.json()) //recupere le json
@@ -42,9 +34,7 @@ window.addEventListener('DOMContentLoaded',(event) => {
             })
     }
 /*----------------------------- top_rated_movie ------------------------------- */
-/*----------------------------- top_rated_movie ------------------------------- */
-/*----------------------------- top_rated_movie ------------------------------- */
-/*----------------------------- top_rated_movie ------------------------------- */
+
     async function top_rated_movie(){
         let data = []
 
@@ -66,9 +56,7 @@ window.addEventListener('DOMContentLoaded',(event) => {
         })    
     }
 /*----------------------------- popular_movie ------------------------------- */
-/*----------------------------- popular_movie ------------------------------- */
-/*----------------------------- popular_movie ------------------------------- */
-/*----------------------------- popular_movie ------------------------------- */ 
+/ 
     async function popular_movie(){
     let data = []
 
@@ -90,10 +78,7 @@ window.addEventListener('DOMContentLoaded',(event) => {
         })    
     }
 /*----------------------------- now_playing_movie ------------------------------- */ 
-/*----------------------------- now_playing_movie ------------------------------- */ 
-/*----------------------------- now_playing_movie ------------------------------- */ 
-/*----------------------------- now_playing_movie ------------------------------- */ 
-/*----------------------------- now_playing_movie ------------------------------- */ 
+
 async function now_playing_movie(){
     let data = []
 
