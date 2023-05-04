@@ -22,7 +22,7 @@ session_start();
     <link rel="stylesheet" href="../css/search.css">
     <link rel="stylesheet" href="../css/admin.css"> 
 
-    <title>Ciné-tech</title>
+    <title>Cinétech</title>
 </head>
 <body>
     <header class="headermix">
